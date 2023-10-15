@@ -1,0 +1,152 @@
+:root {
+    --rotation: 360deg;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(11,11,11,1);
+    background: linear-gradient(180deg, rgba(2,2,2,1) 11%,rgba(11,11,11,1) 44%, rgba(0,0,0,1) 88%);
+}
+
+.hidden { 
+    opacity: 0;
+}
+
+.container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chakra-name {
+    font-family: 'Merienda', cursive;
+    font-size: 42px;
+    font-weight: 800;
+    font-style: bold;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.circle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: all 1.2s linear;
+}
+
+.lotus {
+    display: flex;
+    transition: 0.8s ease-in-out;
+    filter: drop-shadow(0 0 4.4rem rgba(242, 242, 242, 0.2));
+}
+
+.chakras {
+    position: absolute;
+    width: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 500px;
+    top: 0;
+}
+
+.chakras > img {
+    position: absolute;
+    width: 100%;
+    transition: all .4s ease;
+    animation: 8s rotate infinite linear;
+    opacity: 0.44;
+}
+
+.chakras > img:hover {
+    position: absolute;
+    animation: 0.8s scale ease-in;
+    opacity: 1;
+}
+
+.sahasrara {
+    top: 100px;
+}
+.anja {
+    top: 155px;
+}
+.vishuddha {
+    top: 210px;
+}
+.anahata {
+    bottom: 190px;
+}
+.manipura {
+    bottom: 132px;
+}
+.svadhishthana {
+    bottom: 75px;
+}
+.muladhara {
+    bottom: 20px;
+}
+
+.sahasrara:hover {
+    filter: drop-shadow(0 0 0.75rem rgb(137, 62, 151));
+}
+.anja:hover {
+    filter: drop-shadow(0 0 0.75rem rgb(77, 42, 124));
+}
+.vishuddha:hover {
+    filter: drop-shadow(0 0 0.75rem rgb(20, 163, 220));
+}
+.anahata:hover {
+    filter: drop-shadow(0 0 0.75rem rgb(67, 135, 63));
+}
+.manipura:hover {
+    filter: drop-shadow(0 0 0.75rem rgb(226, 213, 49));
+}
+.svadhishthana:hover {
+    filter: drop-shadow(0 0 0.75rem rgb(195, 119, 41));
+}
+.muladhara:hover {
+    filter: drop-shadow(0 0 0.75rem rgb(186, 40, 39));
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1) rotate(0);
+    }
+    to {
+        transform: scale(1.2) rotate(360deg);
+    }
+}
